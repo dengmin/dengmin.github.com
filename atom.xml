@@ -4,13 +4,69 @@
   <subtitle><![CDATA[一个混迹互联网的码农]]></subtitle>
   <link href="http://dengmin.github.io/atom.xml" rel="self"/>
   <link href="http://dengmin.github.io"/>
-  <updated>2014-01-10T02:12:35.714Z</updated>
+  <updated>2014-03-13T01:11:56.144Z</updated>
   <id>http://dengmin.github.io/</id>
   <author>
     <name><![CDATA[dengmin]]></name>
     <email><![CDATA[minhao123@gmail.com]]></email>
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[bash操作快捷键]]></title>
+    <link href="http://dengmin.github.io/2014/03/13/bash操作快捷键/"/>
+    <id>http://dengmin.github.io/2014/03/13/bash操作快捷键/</id>
+    <published>2014-03-13T01:10:27.000Z</published>
+    <updated>2014-03-13T01:11:37.000Z</updated>
+    <content type="html"><![CDATA[<p>[来自网络]bash快捷操作</p>
+<p>生活在 Bash shell 中，熟记以下快捷键，将极大的提高你的命令行操作效率。</p>
+<p>编辑命令</p>
+<pre><code><span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">a</span> <span class="comment">：移到命令行首</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">e</span> <span class="comment">：移到命令行尾</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">f</span> <span class="comment">：按字符前移（右向）</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">b</span> <span class="comment">：按字符后移（左向）</span>
+<span class="comment">Alt</span> <span class="literal">+</span> <span class="comment">f</span> <span class="comment">：按单词前移（右向）</span>
+<span class="comment">Alt</span> <span class="literal">+</span> <span class="comment">b</span> <span class="comment">：按单词后移（左向）</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">xx：在命令行首和光标之间移动</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">u</span> <span class="comment">：从光标处删除至命令行首</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">k</span> <span class="comment">：从光标处删除至命令行尾</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">w</span> <span class="comment">：从光标处删除至字首</span>
+<span class="comment">Alt</span> <span class="literal">+</span> <span class="comment">d</span> <span class="comment">：从光标处删除至字尾</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">d</span> <span class="comment">：删除光标处的字符</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">h</span> <span class="comment">：删除光标前的字符</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">y</span> <span class="comment">：粘贴至光标后</span>
+<span class="comment">Alt</span> <span class="literal">+</span> <span class="comment">c</span> <span class="comment">：从光标处更改为首字母大写的单词</span>
+<span class="comment">Alt</span> <span class="literal">+</span> <span class="comment">u</span> <span class="comment">：从光标处更改为全部大写的单词</span>
+<span class="comment">Alt</span> <span class="literal">+</span> <span class="comment">l</span> <span class="comment">：从光标处更改为全部小写的单词</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">t</span> <span class="comment">：交换光标处和之前的字符</span>
+<span class="comment">Alt</span> <span class="literal">+</span> <span class="comment">t</span> <span class="comment">：交换光标处和之前的单词</span>
+<span class="comment">Alt</span> <span class="literal">+</span> <span class="comment">Backspace：与</span> <span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">w</span> <span class="comment">类似</code></pre>
+<p>重新执行命令</p>
+<pre><code><span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">r：逆向搜索命令历史</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">g：从历史搜索模式退出</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">p：历史中的上一条命令</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">n：历史中的下一条命令</span>
+<span class="comment">Alt</span> <span class="literal">+</span> <span class="string">.</span><span class="comment">：使用上一条命令的最后一个参数</code></pre>
+<p>控制命令</p>
+<pre><code><span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">l：清屏</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">o：执行当前命令，并选择上一条命令</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">s：阻止屏幕输出</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">q：允许屏幕输出</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">c：终止命令</span>
+<span class="comment">Ctrl</span> <span class="literal">+</span> <span class="comment">z：挂起命令</code></pre>
+<p>Bang (!) 命令</p>
+<pre><code><span class="exclamation_mark">!</span><span class="exclamation_mark">!</span>：执行上一条命令
+<span class="exclamation_mark">!</span><span class="function_or_atom">blah</span>：执行最近的以 <span class="function_or_atom">blah</span> 开头的命令，如 <span class="exclamation_mark">!</span><span class="function_or_atom">ls</span>
+<span class="exclamation_mark">!</span><span class="function_or_atom">blah:p</span>：仅打印输出，而不执行
+<span class="exclamation_mark">!</span>$：上一条命令的最后一个参数，与 <span class="variable">Alt</span> + . 相同
+<span class="exclamation_mark">!</span>$:<span class="function_or_atom">p</span>：打印输出 <span class="exclamation_mark">!</span>$ 的内容
+<span class="exclamation_mark">!</span>*：上一条命令的所有参数
+<span class="exclamation_mark">!</span>*:<span class="function_or_atom">p</span>：打印输出 <span class="exclamation_mark">!</span>* 的内容
+^<span class="function_or_atom">blah</span>：删除上一条命令中的 <span class="function_or_atom">blah</span>
+^<span class="function_or_atom">blah</span>^<span class="function_or_atom">foo</span>：将上一条命令中的 <span class="function_or_atom">blah</span> 替换为 <span class="function_or_atom">foo</span>
+^<span class="function_or_atom">blah</span>^<span class="function_or_atom">foo</span>^：将上一条命令中所有的 <span class="function_or_atom">blah</span> 都替换为 <span class="function_or_atom">foo</span></code></pre>
+]]></content>
+    <category scheme="http://dengmin.github.io/tags/bash/" term="bash"/>
+  </entry>
   <entry>
     <title type="html"><![CDATA[sublime-text-keybind]]></title>
     <link href="http://dengmin.github.io/2013/12/23/sublime-text-keybind/"/>
