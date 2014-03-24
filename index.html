@@ -64,6 +64,91 @@
     <header>
       
         <div class="icon"></div> 
+        <time datetime="2014-03-24T08:16:56.000Z"><a href="/2014/03/24/ext-render-button-in-grid-column/">3月 24 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/03/24/ext-render-button-in-grid-column/">extjs4 grid的column中加入button按钮</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>在Extjs中如果要往gridpanel中加上一些按钮的话可以实现<code>actioncolumn</code>，来实现</p>
+<p>但是actioncolumn渲染出来的只是一些icon ，文字只能加到tooltip中。</p>
+<p>现在有中很简便的方法可以在column中加入button等extjs的component.<br>这里要用到一个函数<code>Ext.defer()</code></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="code"><pre>{
+    header: 'Buttons',
+    renderer: function (v, m, r) {
+        var id = Ext.id();
+        var down_id = Ext.id();
+        Ext.defer(function () {
+            Ext.widget('button', {
+                renderTo: id,
+                text: 'Edit',
+                handler: function () { Ext.Msg.alert('Info', r.get('name')) }
+            });
+            
+            Ext.widget('button',{
+                renderTo : down_id,
+                text: 'download'
+            });
+        }, 50);
+        return Ext.String.format('<span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"{0}"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">span</span> <span class="attribute">id</span>=<span class="value">"{1}"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>', id, down_id);
+    }
+}
+</pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+	  
+	  
+  
+  <div class="tags">
+    <a href="/tags/extjs/">extjs</a>
+  </div>
+
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div> 
         <time datetime="2014-03-13T01:10:27.000Z"><a href="/2014/03/13/bash操作快捷键/">3月 13 2014</a></time>
       
       
@@ -305,6 +390,8 @@ grid<span class="variable">.view</span><span class="variable">.loadMask</span><s
   <ul class="entry">
   
     <li><a href="/tags/bash/">bash</a><small>1</small></li>
+  
+    <li><a href="/tags/extjs/">extjs</a><small>1</small></li>
   
     <li><a href="/tags/extjs4/">extjs4</a><small>1</small></li>
   
