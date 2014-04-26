@@ -3,15 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>sublime-text-keybind | 哈罗-沃德</title>
+  <title>多选框checkbox实现单选效果 | 哈罗-沃德</title>
   <meta name="author" content="dengmin">
   
-  <meta name="description" content="Ctrl+D 选词 （反复按快捷键，即可继续向下同时选中下一个相同的文本进行同时编辑）Ctrl+G 跳转到相应的行Ctrl+J 合并行（已选择需要合并的多行时）Ctrl+L 选择整行（按住-继续选择下行）Ctrl+M 光标移动至括号内开始或结束的位置Ctrl+T 词互换Ctrl+U 软撤销Ctrl+">
+  <meta name="description" content="需要把一组多选框实现单选的效果功能。使用jQuery只需几行代码就能搞定。这里记录备忘。
+1
+2
+3
+4
+5
+6
+$(&quot;input[name='task_id']&quot;).click(function(){
+    if($(this).prop('checked')){
+        $(&quot;inpu">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="sublime-text-keybind"/>
+  <meta property="og:title" content="多选框checkbox实现单选效果"/>
   <meta property="og:site_name" content="哈罗-沃德"/>
 
   
@@ -65,17 +74,31 @@
     <header>
       
         <div class="icon"></div> 
-        <time datetime="2013-12-23T01:30:41.000Z"><a href="/2013/12/23/sublime-text-keybind/">12月 23 2013</a></time>
+        <time datetime="2014-04-26T06:25:05.000Z"><a href="/2014/04/26/checkbox-with-single-select/">4月 26 2014</a></time>
       
       
   
-    <h1 class="title">sublime-text-keybind</h1>
+    <h1 class="title">多选框checkbox实现单选效果</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>Ctrl+D 选词 （反复按快捷键，即可继续向下同时选中下一个相同的文本进行同时编辑）<br>Ctrl+G 跳转到相应的行<br>Ctrl+J 合并行（已选择需要合并的多行时）<br>Ctrl+L 选择整行（按住-继续选择下行）<br>Ctrl+M 光标移动至括号内开始或结束的位置<br>Ctrl+T 词互换<br>Ctrl+U 软撤销<br>Ctrl+P 查找当前项目中的文件和快速搜索；输入 @ 查找文件主标题/函数；或者输入 : 跳转到文件某行；<br>Ctrl+R 快速列出/跳转到某个函数<br>Ctrl+K Backspace 从光标处删除至行首<br>Ctrl+KB 开启/关闭侧边栏<br>Ctrl+KK 从光标处删除至行尾<br>Ctrl+KT 折叠属性<br>Ctrl+KU 改为大写<br>Ctrl+KL 改为小写<br>Ctrl+K0 展开所有<br>Ctrl+Enter 插入行后（快速换行）<br>Ctrl+Tab 当前窗口中的标签页切换<br>Ctrl+Shift+A 选择光标位置父标签对儿<br>Ctrl+Shift+D 复制光标所在整行，插入在该行之前<br>ctrl+shift+F 在文件夹内查找，与普通编辑器不同的地方是sublime允许添加多个文件夹进行查找<br>Ctrl+Shift+K 删除整行<br>Ctrl+Shift+L 鼠标选中多行（按下快捷键），即可同时编辑这些行<br>Ctrl+Shift+M 选择括号内的内容（按住-继续选择父括号）<br>Ctrl+Shift+P 打开命令面板<br>Ctrl+Shift+/ 注释已选择内容<br>Ctrl+Shift+↑可以移动此行代码，与上行互换<br>Ctrl+Shift+↓可以移动此行代码，与下行互换<br>Ctrl+Shift+[ 折叠代码<br>Ctrl+Shift+] 展开代码<br>Ctrl+Shift+Enter 光标前插入行<br>Ctrl+PageDown 、Ctrl+PageUp 文件按开启的前后顺序切换<br>Ctrl+Z 撤销<br>Ctrl+Y 恢复撤销<br>Ctrl+F2 设置书签<br>Ctrl+/ 注释整行（如已选择内容，同“Ctrl+Shift+/”效果）<br>Ctrl+鼠标左键 可以同时选择要编辑的多处文本<br>Shift+鼠标右键（或使用鼠标中键）可以用鼠标进行竖向多行选择<br>Shift+F2 上一个书签<br>Shift+Tab 去除缩进<br>Alt+Shift+1~9（非小键盘）屏幕显示相等数字的小窗口<br>Alt+. 闭合当前标签<br>Alt+F3 选中文本按下快捷键，即可一次性选择全部的相同文本进行同时编辑<br>Tab 缩进 自动完成<br>F2 下一个书签<br>F6 检测语法错误<br>F9 行排序(按a-z)<br>F11 全屏模式</p>
+        <p>需要把一组多选框实现单选的效果功能。使用jQuery只需几行代码就能搞定。这里记录备忘。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="variable">$(</span><span class="string">"input[name='task_id']"</span>).click(function(){
+    <span class="keyword">if</span>(<span class="variable">$(</span>this).prop(<span class="string">'checked'</span>)){
+        <span class="variable">$(</span><span class="string">"input[name='task_id']"</span>).prop(<span class="string">'checked'</span>,<span class="keyword">false</span>);
+        <span class="variable">$(</span>this).prop(<span class="string">'checked'</span>,<span class="keyword">true</span>);
+    }
+});
+</pre></td></tr></table></figure>
+
 
       
     </div>
@@ -87,7 +110,7 @@
 	  
   
   <div class="tags">
-    <a href="/tags/sublime/">sublime</a>
+    <a href="/tags/javascript/">javascript</a>
   </div>
 
       <div class="clearfix"></div>

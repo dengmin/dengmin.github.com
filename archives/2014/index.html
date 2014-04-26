@@ -68,6 +68,61 @@
     <header>
       
         <div class="icon"></div> 
+        <time datetime="2014-04-26T06:25:05.000Z"><a href="/2014/04/26/checkbox-with-single-select/">4月 26 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/04/26/checkbox-with-single-select/">多选框checkbox实现单选效果</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>需要把一组多选框实现单选的效果功能。使用jQuery只需几行代码就能搞定。这里记录备忘。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="variable">$(</span><span class="string">"input[name='task_id']"</span>).click(function(){
+    <span class="keyword">if</span>(<span class="variable">$(</span>this).prop(<span class="string">'checked'</span>)){
+        <span class="variable">$(</span><span class="string">"input[name='task_id']"</span>).prop(<span class="string">'checked'</span>,<span class="keyword">false</span>);
+        <span class="variable">$(</span>this).prop(<span class="string">'checked'</span>,<span class="keyword">true</span>);
+    }
+});
+</pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+	  
+	  
+  
+  <div class="tags">
+    <a href="/tags/javascript/">javascript</a>
+  </div>
+
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div> 
         <time datetime="2014-03-24T08:16:56.000Z"><a href="/2014/03/24/ext-render-button-in-grid-column/">3月 24 2014</a></time>
       
       
@@ -261,6 +316,8 @@
     <li><a href="/tags/extjs/">extjs</a><small>1</small></li>
   
     <li><a href="/tags/extjs4/">extjs4</a><small>1</small></li>
+  
+    <li><a href="/tags/javascript/">javascript</a><small>1</small></li>
   
     <li><a href="/tags/sublime/">sublime</a><small>1</small></li>
   

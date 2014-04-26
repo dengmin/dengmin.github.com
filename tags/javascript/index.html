@@ -3,26 +3,13 @@
 <head>
   <meta charset="utf-8">
   
-  <title>extjs4中gridpanel中的store加载时候不显示加载提示 | 哈罗-沃德</title>
+  <title>javascript | 哈罗-沃德</title>
   <meta name="author" content="dengmin">
-  
-  <meta name="description" content="今天碰到这么一个问题，有一个定时器隔断时间就要重新加载一次store的数据，但是每次load的时候Grid上面总是出现一个读取中的 提示。
-感觉挺别扭的，就想要把这东西去掉。
-在api里面 有个配置
-1
-2
-3
-viewConfig : {
-    loadMask : false
-}
-
-
-load">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="extjs4中gridpanel中的store加载时候不显示加载提示"/>
+  
   <meta property="og:site_name" content="哈罗-沃德"/>
 
   
@@ -70,41 +57,40 @@ load">
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+<h2 class="archive-title tag">javascript</h2>
+
+
+  
+    <article class="post">
   
   <div class="post-content">
     <header>
       
         <div class="icon"></div> 
-        <time datetime="2013-12-20T02:04:58.000Z"><a href="/2013/12/20/extjs-grid-load-mask/">12月 20 2013</a></time>
+        <time datetime="2014-04-26T06:25:05.000Z"><a href="/2014/04/26/checkbox-with-single-select/">4月 26 2014</a></time>
       
       
   
-    <h1 class="title">extjs4中gridpanel中的store加载时候不显示加载提示</h1>
+    <h1 class="title"><a href="/2014/04/26/checkbox-with-single-select/">多选框checkbox实现单选效果</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <p>今天碰到这么一个问题，有一个定时器隔断时间就要重新加载一次store的数据，但是每次load的时候Grid上面总是出现一个读取中的 提示。</p>
-<p>感觉挺别扭的，就想要把这东西去掉。</p>
-<p>在api里面 有个配置</p>
+        <p>需要把一组多选框实现单选的效果功能。使用jQuery只需几行代码就能搞定。这里记录备忘。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
-</pre></td><td class="code"><pre><span class="title">viewConfig</span> : {
-    <span class="title">loadMask</span> : <span class="built_in">false</span>
-}
-</pre></td></tr></table></figure>
-
-<p>loadMask设置成False了仍然不能解决</p>
-<p>经过各种调试得出的结果是 在GridPanel执行reload方法前需要动态去修改view的配置信息</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-</pre></td><td class="code"><pre>grid<span class="variable">.view</span><span class="variable">.loadMask</span><span class="variable">.useMsg</span> = <span class="literal">false</span>;  <span class="comment">//不开启Mask</span>
-grid<span class="variable">.getStore</span>()<span class="variable">.load</span>();
-grid<span class="variable">.view</span><span class="variable">.loadMask</span><span class="variable">.useMsg</span> = <span class="literal">true</span>;
+4
+5
+6
+</pre></td><td class="code"><pre><span class="variable">$(</span><span class="string">"input[name='task_id']"</span>).click(function(){
+    <span class="keyword">if</span>(<span class="variable">$(</span>this).prop(<span class="string">'checked'</span>)){
+        <span class="variable">$(</span><span class="string">"input[name='task_id']"</span>).prop(<span class="string">'checked'</span>,<span class="keyword">false</span>);
+        <span class="variable">$(</span>this).prop(<span class="string">'checked'</span>,<span class="keyword">true</span>);
+    }
+});
 </pre></td></tr></table></figure>
 
 
@@ -112,13 +98,14 @@ grid<span class="variable">.view</span><span class="variable">.loadMask</span><s
     </div>
     <footer>
       
-          
+        
+        
       
 	  
 	  
   
   <div class="tags">
-    <a href="/tags/extjs4/">extjs4</a>
+    <a href="/tags/javascript/">javascript</a>
   </div>
 
       <div class="clearfix"></div>
@@ -127,24 +114,15 @@ grid<span class="variable">.view</span><span class="variable">.loadMask</span><s
 </article>
 
 
-<section id="comment">
-  <h1 class="title">留言</h1>
-	<!-- Duoshuo Comment BEGIN -->
-	<div class="ds-thread"></div>
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"hello-world"};
-	(function() {
-	var ds = document.createElement('script');
-	ds.type = 'text/javascript';ds.async = true;
-	ds.src = 'http://static.duoshuo.com/embed.js';
-	ds.charset = 'UTF-8';
-	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- Duoshuo Comment END -->
-</section>
 
 
+  
+
+  <nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav>
 </div></div>
   <!--  <aside id="sidebar" class="alignright">
   <div class="search">

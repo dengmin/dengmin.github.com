@@ -4,13 +4,37 @@
   <subtitle><![CDATA[一个混迹互联网的码农]]></subtitle>
   <link href="http://dengmin.github.io/atom.xml" rel="self"/>
   <link href="http://dengmin.github.io"/>
-  <updated>2014-03-24T08:33:41.414Z</updated>
+  <updated>2014-04-26T06:30:48.410Z</updated>
   <id>http://dengmin.github.io/</id>
   <author>
     <name><![CDATA[dengmin]]></name>
     <email><![CDATA[minhao123@gmail.com]]></email>
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[多选框checkbox实现单选效果]]></title>
+    <link href="http://dengmin.github.io/2014/04/26/checkbox-with-single-select/"/>
+    <id>http://dengmin.github.io/2014/04/26/checkbox-with-single-select/</id>
+    <published>2014-04-26T06:25:05.000Z</published>
+    <updated>2014-04-26T06:30:26.000Z</updated>
+    <content type="html"><![CDATA[<p>需要把一组多选框实现单选的效果功能。使用jQuery只需几行代码就能搞定。这里记录备忘。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre><span class="variable">$(</span><span class="string">"input[name='task_id']"</span>).click(function(){
+    <span class="keyword">if</span>(<span class="variable">$(</span>this).prop(<span class="string">'checked'</span>)){
+        <span class="variable">$(</span><span class="string">"input[name='task_id']"</span>).prop(<span class="string">'checked'</span>,<span class="keyword">false</span>);
+        <span class="variable">$(</span>this).prop(<span class="string">'checked'</span>,<span class="keyword">true</span>);
+    }
+});
+</pre></td></tr></table></figure>
+
+]]></content>
+    <category scheme="http://dengmin.github.io/tags/javascript/" term="javascript"/>
+  </entry>
   <entry>
     <title type="html"><![CDATA[extjs4 grid的column中加入button按钮]]></title>
     <link href="http://dengmin.github.io/2014/03/24/ext-render-button-in-grid-column/"/>
